@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+
+  color: lightgrey;
+
+  background: #342F5B;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+.container{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  background: #41396E;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(36, 36, 36, 0.55);
+}
+
+
+
+
+
+
+
+
+/*Стили кнопок*/
+.btn{
+  height: 40px;
+
+  padding: 5px 20px;
+  margin: 5px 0;
+
+  border-radius: 5px;
+  border: 1px solid #373563;
+
+  font-size: 18px;
+
+  background: inherit;
+  color: #ededed;
+}
+
+
+.primary{
+  background: #9D3CD6;
+}
+
+.primary:hover{
+  background: #9e32d9;
+}
+
+.danger{
+  background: #FF9300;
+}
+
+.danger:hover{
+  background: #ed8902;
+}
+
+.completed{
+  background: green;
+}
+
+.completed:hover{
+  background: #057b05;
+}
+
+.icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

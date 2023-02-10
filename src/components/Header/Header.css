@@ -1,0 +1,22 @@
+.header{
+    padding: 25px 0;
+
+    color: white;
+
+    background: -webkit-linear-gradient(90deg, #282C5A,#423A6F);
+    background: linear-gradient(90deg, #282C5A,#423A6F);
+    box-shadow: 0 0 20px rgba(36, 36, 36, 0.89);
+
+    margin-bottom: 20px;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title{
+    font-size: 20px;
+    font-weight: 600;
+}
