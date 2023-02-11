@@ -5,8 +5,9 @@
   list-style: none;
   text-decoration: none;
   outline: none;
-
 }
+
+
 
 
 body {
@@ -19,9 +20,7 @@ body {
 
 
   color: lightgrey;
-
   background: #342F5B;
-
 }
 
 code {
@@ -34,7 +33,6 @@ code {
 
 .container{
   max-width: 1000px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 16px;
 }

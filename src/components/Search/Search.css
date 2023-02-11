@@ -1,0 +1,15 @@
+.search-input{
+    padding: 8px 10px;
+
+    width: 100%;
+
+    color: grey;
+    background: #373563;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    overflow: hidden;
+}

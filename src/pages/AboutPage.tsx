@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 const AboutPage: FC = () => {
     return (
         <div>
-            About
+            <h2 style={{textAlign: 'center'}}>About</h2>
         </div>
     );
 };

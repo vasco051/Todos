@@ -1,20 +1,24 @@
 import React, {FC} from 'react';
-import todoStore from "../../store/TodoStore";
 import TodoItem from "../TodoItem/TodoItem";
-import {observer} from "mobx-react-lite";
 import './TodoList.css'
+import {ITodo} from "../../types/todo";
+import {observer} from "mobx-react-lite";
 
 
-const TodoList: FC = observer(() => {
+interface TodoListProps{
+    todos: ITodo[]
+}
+
+const TodoList: FC<TodoListProps> = observer(({todos}) => {
     return (
-        <div className='todo-list box'>
-            {todoStore.todos.length
-                ? todoStore.todos.map(todo =>
+        <section className='todo-list box'>
+            {todos.length
+                ? todos.map(todo =>
                     <TodoItem todo={todo} key={todo.id}/>
                 )
-                : <h2 className='todo-list-title'>Todos not find</h2>
+                : <h2 className='todo-list-title'>Nothing found</h2>
             }
-        </div>
+        </section>
     );
 });
 

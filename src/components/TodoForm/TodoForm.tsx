@@ -1,76 +1,32 @@
 import React, {FC, useState} from 'react';
-import useInput from "../../hooks/useInput";
-import {ITodo} from "../../types/todo";
-import todoStore from "../../store/TodoStore";
 import './TodoForm.css'
-import SelectSort from "../SelectSort";
+import {observer} from "mobx-react-lite";
+import Search from "../Search/Search";
+import Form from "../Form/Form";
+import MySelect from "../UI/select/MySelect";
 
 
-const TodoForm: FC = () => {
+const TodoForm: FC = observer(() => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
-
-    const [title, setTitle, changeTitle] = useInput('')
-    const [body, setBody, changeBody] = useInput('')
-
-    const addPost = () => {
-        if (!title) {
-            return console.log('Введите заголовок')
-        }
-
-        let fullDate = new Date()
-        const [date, time] = fullDate.toLocaleString().split(', ')
-
-        const todo: ITodo = {
-            id: Date.now(),
-            title: title,
-            body: body,
-            dateOfCreation: {time, date},
-            completed: false
-        }
-
-        todoStore.addTodo(todo)
-        setIsOpen(false)
-        setTitle('')
-        setBody('')
-    }
-
-
     return (
-        <div className='form box'>
+        <section className='form-todo box'>
             <button className='btn primary icon' onClick={() => setIsOpen(prev => !prev)}>{isOpen ? '-' : '+'}</button>
-            {isOpen &&
-              <div className="form-wrapper">
-                <div className="form-inputs">
-                  <input
-                    className='form-input'
-                    type="text"
-                    value={title}
-                    placeholder='Task title'
-                    onChange={changeTitle}
-                  />
-                  <div className="border"></div>
-                  <textarea
-                    className='form-input'
-                    value={body}
-                    placeholder='Description...'
-                    onChange={changeBody}
-                  />
-                </div>
-                <button className='btn primary form-button' onClick={addPost}>Add</button>
-              </div>
-            }
+            {isOpen && <Form setIsOpen={setIsOpen}/>}
             {!isOpen &&
-              <>
-                  <SelectSort defaultValue='sorted' options={[
-                      {value: '', name: 'all'},
-                      {value: 'complied', name: 'Complied'},
-                      {value: 'unComplied', name: 'Un complied'},
+                <>
+                  <Search/>
+                  <MySelect defaultValue='Sort on' options={[
+                      {value: 'time', name: 'Time'},
+                      {value: 'title', name: 'Title'},
+                      {value: 'body', name: 'Text'},
+                      {value: 'completed', name: 'Ready'},
+                      {value: 'uncompleted', name: 'Not ready'},
                   ]}/>
-              </>
+                </>
             }
-        </div>
+        </section>
     );
-};
+});
 
 export default TodoForm;
