@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,43 +8,42 @@
 }
 
 
-
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
 
-
   color: lightgrey;
   background: #342F5B;
+
+  /*color: black;*/
+  /*background: white;*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 
-
-
-.container{
+.container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.box{
+.box {
   background: #41396E;
+  /*background: white;*/
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(36, 36, 36, 0.55);
@@ -53,12 +52,35 @@ code {
 
 
 
+/*Стили инпутов*/
+.input, .textarea{
+  width: 100%;
+  background: inherit;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.input{
+  color: lightgrey;
+  font-weight: 700;
+}
+
+.textarea{
+  height: 100px;
+}
+
 
 
 
 
 /*Стили кнопок*/
-.btn{
+.btn {
+  cursor: pointer;
+
   height: 40px;
 
   padding: 5px 20px;
@@ -74,31 +96,31 @@ code {
 }
 
 
-.primary{
+.primary {
   background: #9D3CD6;
 }
 
-.primary:hover{
+.primary:hover {
   background: #9e32d9;
 }
 
-.danger{
+.danger {
   background: #FF9300;
 }
 
-.danger:hover{
+.danger:hover {
   background: #ed8902;
 }
 
-.completed{
+.completed {
   background: green;
 }
 
-.completed:hover{
+.completed:hover {
   background: #057b05;
 }
 
-.icon{
+.icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;

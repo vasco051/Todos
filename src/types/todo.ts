@@ -1,12 +1,12 @@
-interface IDateOFCreation{
-    time: string
-    date: string
+interface IDateOFCreation {
+  time: string
+  date: string
 }
 
-export interface ITodo{
-    id: number
-    title: string
-    body: string
-    completed: boolean
-    dateOfCreation: IDateOFCreation
+export interface ITodo {
+  id: number
+  title: string
+  body: string
+  completed: boolean
+  dateOfCreation: IDateOFCreation
 }

@@ -1,15 +1,31 @@
-.search-input{
-    padding: 8px 10px;
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 
-    width: 100%;
+  border-radius: 10px;
 
-    color: grey;
-    background: #373563;
+  background: #373563;
+  color: grey;
 
-    border: none;
-    border-radius: 10px;
+  overflow: hidden;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    overflow: hidden;
+  padding: 10px;
+}
+
+.search-input {
+  width: 100%;
+
+  background: inherit;
+  color: inherit;
+
+  border: none;
+
+  font-size: 18px;
+}
+
+.search-icon {
+  fill: grey;
 }

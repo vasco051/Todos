@@ -7,18 +7,18 @@ import {observer} from "mobx-react-lite";
 
 
 const App: FC = observer(() => {
-    return (
-        <BrowserRouter>
-            <Header/>
-            <main className='container'>
-                <Routes>
-                    <Route path='/' element={<TodoPage/>}/>
-                    <Route path='/about' element={<AboutPage/>}/>
-                    <Route path='*' element={<TodoPage/>}/>
-                </Routes>
-            </main>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Header/>
+      <main className='container'>
+        <Routes>
+          <Route path='/' element={<TodoPage/>}/>
+          <Route path='/about' element={<AboutPage/>}/>
+          <Route path='*' element={<TodoPage/>}/>
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
 });
 
 export default App;

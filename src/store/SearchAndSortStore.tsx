@@ -1,19 +1,20 @@
 import {makeAutoObservable} from "mobx";
 
 class SearchAndSortStore {
-    searchValue: string = ''
-    selectSort: string = 'time'
-    constructor() {
-        makeAutoObservable(this)
-    }
+  searchValue: string = ''
+  selectSort: string = 'time'
 
-    setSelectSort(select: string){
-        this.selectSort = select
-    }
+  constructor() {
+    makeAutoObservable(this)
+  }
 
-    setSearchValue(value: string){
-        this.searchValue = value
-    }
+  setSelectSort(select: string) {
+    this.selectSort = select
+  }
+
+  setSearchValue(value: string) {
+    this.searchValue = value
+  }
 }
 
 export default new SearchAndSortStore()
